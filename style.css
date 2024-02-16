@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  font-family: "Outfit", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--Wenge-Brown);
+  background-color: var(--Eggshell);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: min(100%, 900px);
+  background-color: var(--White);
+  border-radius: 12px;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", sans-serif;
+  color: var(--Dark-Charcoal);
+}
+
+strong {
+  color: var(--Dark-Charcoal);
+}
+
+.padding-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+main article {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+main article h1 {
+  font-size: 2rem;
+  font-size: 400;
+}
+
+main .sectiona_first {
+  background-color: var(--Rose-White);
+  padding: 20px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main .sectiona_first h4 {
+  color: var(--Dark-Raspberry);
+  font-size: 20px;
+}
+
+main .sectiona_first ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 24px;
+  list-style-position: outside;
+}
+
+main .sectiona_first ul li {
+  padding-left: 15px;
+}
+
+main .sectiona_first ul li::marker {
+  color: var(--Dark-Raspberry);
+}
+
+/*------- The second sections style ---------*/
+main .sectiona_second {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main .sectiona_second h2 {
+  color: var(--Nutmeg);
+  font-size: 28px;
+}
+
+main .sectiona_second ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* margin-left: 20px; */
+  list-style-position: outside;
+  padding-left: 25px;
+}
+
+main .sectiona_second ul li {
+  padding-left: 15px;
+}
+
+/*-------- The third sections style---------- */
+main .sectiona_third {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main .sectiona_third h2 {
+  color: var(--Nutmeg);
+  font-size: 28px;
+}
+
+main .sectiona_third ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  list-style-position: outside;
+
+  padding-left: 25px;
+}
+
+main .sectiona_third ol li {
+  padding-left: 15px;
+}
+
+/*-------- The fourth sections style---------- */
+main .sectiona_fourth {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--Wenge-Brown);
+}
+
+main .sectiona_fourth h2 {
+  color: var(--Nutmeg);
+  font-size: 28px;
+}
+
+main .sectiona_fourth table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+main .sectiona_fourth table tr td {
+  padding: 10px;
+  border-bottom: 1px solid var(--Light-Grey);
+}
+
+main .sectiona_fourth table tr th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--Light-Grey);
+}
+
+main .sectiona_fourth table .table_row td {
+  border: none;
+}
+
+main .sectiona_fourth table tr td:last-child,
+th:last-child {
+  color: var(--Nutmeg);
+  font-weight: 600;
+}
+
+main .sectiona_fourth table tr td:first-child,
+main .sectiona_fourth table th:first-child {
+  color: var(--Wenge-Brown);
+  font-weight: 600;
+  padding-left: 35px;
+}
+
+hr {
+  border: 1px solid var(--Light-Grey);
+}
+
+li::marker {
+  color: var(--Nutmeg);
+}
+
+@media screen and (min-width: 550px) {
+  body {
+    padding: 50px;
+  }
+
+  main .the_main_img img {
+    border-radius: 6px;
+  }
+
+  main {
+    padding: 20px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
